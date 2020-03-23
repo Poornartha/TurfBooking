@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #contents{
+            font-family: "Verdana";
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1 style="text-align: center;">{{ turf.name }}</h1>
+    <hr>
+<div class = "container">
+    <h2 style="text-align: center; padding-bottom: 0px; margin-bottom: 0px;">Dashboard</h2>-
+    <div id = "contents">
+        <table class = "table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+    {% if slot_list %}
+        {% for slot in slot_list %}
+            <tbody>
+                     <td>{{ slot.timing }}</td>
+                        <td>{{ slot.user }}</td>
+                     <td>{{ slot.user.phone_number }}</td>
+                 </tr>
+            </tbody>
+        <br>
+        {% endfor %}
+            </table>
+    {% else %}
+        <h3 style = "text-align: center;">No Slots Booked Yet.</h3>
+    {% endif %}
+    </div>
+    <a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
+</div>
+
+</body>
+</html>

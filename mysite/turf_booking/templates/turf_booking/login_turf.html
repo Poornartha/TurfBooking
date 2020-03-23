@@ -4,12 +4,12 @@
 </head>
 <body>
 <div class = "container">
-<h1>User Form</h1>
-<form method = "post" class = "form-control">
+<h1>Turf Login</h1>
+<form class = "form-control" method = "post" >
     {% csrf_token %}
     {{ form.as_p }}
     <input type = "submit">
 </form>
 <a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
-</div>
+    </div>
 </body>

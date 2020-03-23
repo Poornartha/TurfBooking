@@ -9,6 +9,7 @@ from django.utils import timezone
 class Turf(models.Model):
     name = models.CharField(max_length=200)
     location = models.TextField()
+    password = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
@@ -17,7 +18,7 @@ class Turf(models.Model):
 class Bookie(models.Model):
     name = models.CharField(max_length=200)
     password = models.CharField(max_length=100)
-    phone_number = models.IntegerField()
+    phone_number = models.IntegerField(max_length=10)
 
     def __str__(self):
         return self.name

@@ -9,5 +9,8 @@ urlpatterns = [
     path('user', views.create_user, name="set_user"),
     path('user_login', views.user_login, name="user_login"),
     path('listings/<str:pk>/', views.listings, name="listings"),
-    path('listings/<str:upk>/<str:tpk>', views.new_slot, name="new_slot")
+    path('listings/<str:upk>/<str:tpk>', views.new_slot, name="new_slot"),
+    path('turf_detail/<str:pk>', views.turf_detail, name="turf_detail"),
+    path('login_turf', views.login_turf, name="turf_login"),
+    path('signup_turf', views.create_turf, name="set_turf"),
 ]

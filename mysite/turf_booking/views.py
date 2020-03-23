@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
-from .forms import NewUser, NewTurf, NewSlot, LogUser
+from .forms import NewUser, NewTurf, NewSlot, LogUser, LogTurf
 from .models import Turf, Slot, Bookie
 import datetime
 
@@ -17,6 +17,26 @@ def create_turf(request):
         'form': form,
     }
     return render(request, 'turf_booking/index.html', context)
+
+
+def login_turf(request):
+    form = LogTurf()
+    if request.method == "POST":
+        form = LogTurf(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            password = form.cleaned_data['password']
+            try:
+                turf = Turf.objects.get(name=name)
+                if turf.password == password:
+                    pk = turf.pk
+                return redirect('turf_detail', pk)
+            except Exception:
+                print("User absent")
+    context = {
+        'form': form,
+    }
+    return render(request, 'turf_booking/login_turf.html', context)
 
 
 def create_slot(request, pk):
@@ -96,9 +116,9 @@ def new_slot(request, upk, tpk):
     user = Bookie.objects.get(pk=upk)
     turf = Turf.objects.get(pk=tpk)
     slot_list = turf.slot_set.all()
-    for slot in slot_list:
-        if slot.book_timing.date() != datetime.date.today():
-            slot.delete()
+    #for slot in slot_list:
+     #   if slot.book_timing.date() != datetime.date.today():
+      #      slot.delete()
     form = NewSlot()
     if request.method == "POST":
         form = NewSlot(request.POST)
@@ -125,6 +145,21 @@ def new_slot(request, upk, tpk):
     return render(request, 'turf_booking/slot.html', context)
 
 
+def turf_detail(request, pk):
+    try:
+        turf = Turf.objects.get(id=pk)
+        slot_list = turf.slot_set.all()
+        context = {
+            'slot_list': slot_list,
+            'turf': turf,
+        }
+        return render(request, 'turf_booking/turf_detail.html', context)
+    except Exception:
+        print("Non Found")
+    context = {
+        'slot_list': [],
+    }
+    return render(request, 'turf_booking/turf_detail.html', context)
 
 def home(request):
     return render(request, 'turf_booking/home.html')
