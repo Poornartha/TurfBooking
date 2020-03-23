@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turf-er</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        #heading{
+            margin-top: 100px;
+            text-align: center;
+            font-size: 7em;
+            font-family: "Andale Mono", monospace;
+        }
+
+        #jumbo{
+            margin-top: 100px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id = "heading">
+        TURF-NATION
+        <h3 style="font-family: Arial, sans-serif;">Your One Stop Destination To Book Turfs</h3>
+        <i class="material-icons" style="font-align: center; font-size: 6rem; margin-top:100px;">expand_more</i>
+    </div>
+    <div class = "container" id = "jumbo">
+        <div class = "row">
+            <div class="jumbotron col-lg-5">
+                <h1 class="display-4">Want to Book a Turf?</h1>
+                <p class="lead">Get best prices.</p>
+                <hr class="my-4">
+                <p>Get Best Booking Support</p>
+                <p class="lead" style="margin-left: 0px;">
+                <br>
+                <a class="btn btn-dark btn-lg" href="{% url 'user_login' %}" role="button">Login</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-dark btn-lg" href="{% url 'set_user' %}" role="button">Signup</a>
+                </p>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="jumbotron col-lg-5 offset-lg-1">
+                <h1 class="display-4">Own A Truf?</h1>
+                <p class="lead">Register/List Your Turf or Check Bookings.</p>
+                <hr class="my-4">
+                <p>Get regular Analytics and better Management.</p>
+                <p class="lead" style="margin-left: 0px;">
+                    <br>
+                <a class="btn btn-dark btn-lg" href="#" role="button">Login</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-dark btn-lg" href="#" role="button">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

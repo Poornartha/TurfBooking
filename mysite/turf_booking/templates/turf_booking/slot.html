@@ -1,0 +1,9 @@
+<h1>Slot Form</h1>
+{% for slot in slot_list %}
+    <p>{{ slot.timing }}: {{ slot.user }}</p>
+{% endfor %}
+<form method = "POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type = "submit">
+</form>
