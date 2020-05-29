@@ -9,6 +9,11 @@
     {% csrf_token %}
     {{ form.as_p }}
     <input type = "submit">
+    {% if check %}
+    <p>
+        Check Your Username and Password.
+    </p>
+    {% endif %}
 </form>
 <a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
     </div>

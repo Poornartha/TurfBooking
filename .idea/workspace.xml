@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70f305c4-3a44-4513-977c-5d8d68807a5c" name="Default Changelist" comment="" />
+    <list default="true" id="70f305c4-3a44-4513-977c-5d8d68807a5c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/listings.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/listings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/login_turf.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/login_turf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/slot.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/slot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +27,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZG67XFVphvv7rWNwXemb21Qg7k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,8 +39,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Git/ToDoList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ToDoList" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -42,6 +58,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590660757299">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1590660757299" />
+    <state x="442" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590646932928">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="442" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1590646932928" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1584957091480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -50,10 +74,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584461564858" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1584953812523">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590647490976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584953812523" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590647490976" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584956393106">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

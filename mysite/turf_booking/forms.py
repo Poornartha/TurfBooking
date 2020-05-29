@@ -1,6 +1,6 @@
 from django import forms
 from .models import Turf, Slot, Bookie
-
+from django.contrib.admin.widgets import AdminDateWidget
 
 # Form for creation of new Turf:
 class NewTurf(forms.ModelForm):
@@ -18,7 +18,10 @@ class NewTurf(forms.ModelForm):
 class NewSlot(forms.ModelForm):
     class Meta:
         model = Slot
-        fields = ['timing']
+        fields = ['timing', 'date']
+        widgets = {
+            'date': forms.DateTimeInput(attrs={'class': 'datetime-input'})
+        }
 
 
 # Form for creation of new User:
