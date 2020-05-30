@@ -14,7 +14,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-
+{% if turfLoggedIn %}
 <h1 style="text-align: center;">{{ turf.name }}</h1>
     <hr>
 <div class = "container">
@@ -45,6 +45,9 @@
     </div>
     <a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
 </div>
-
+{% endif %}
+{% if turfLoggedIn == False %}
+<h2>You aren't authorized to view this page</h2>
+{% endif %}
 </body>
 </html>

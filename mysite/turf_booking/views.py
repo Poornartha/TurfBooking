@@ -3,6 +3,8 @@ from .forms import NewUser, NewTurf, NewSlot, LogUser, LogTurf
 from .models import Turf, Slot, Bookie
 from datetime import datetime, date
 
+userLoggedIn = False
+turfLoggedIn = True
 # Create your views here.
 
 
@@ -32,6 +34,8 @@ def login_turf(request):
                 turf = Turf.objects.get(name=name)
                 if turf.password == password:
                     pk = turf.pk
+                    global turfLoggedIn
+                    turfLoggedIn = True
                 return redirect('turf_detail', pk)
             except Exception:
                 check = True
@@ -68,6 +72,7 @@ def create_slot(request, pk):
         'slot_list': slot_list,
         'turf_id': pk,
         'form': form,
+        'userLoggedIn': userLoggedIn,
     }
     return render(request, 'turf_booking/slot.html', context)
 
@@ -80,6 +85,8 @@ def create_user(request):
             name = form.cleaned_data['name']
             form.save()
             pk = Bookie.objects.get(name=name).pk
+            global userLoggedIn
+            userLoggedIn = True
         return redirect('listings', pk)
     context = {
         'form': form,
@@ -99,6 +106,8 @@ def user_login(request):
                 user = Bookie.objects.get(name=name)
                 if user.password == password:
                     pk = user.pk
+                    global userLoggedIn
+                    userLoggedIn = True
                 return redirect('listings', pk)
             except Exception:
                 check = True
@@ -114,7 +123,8 @@ def listings(request, pk):
     context = {
         'turf_list': Turf.objects.all(),
         'upk': str(pk),
-        'user': Bookie.objects.get(pk=pk)
+        'user': Bookie.objects.get(pk=pk),
+        'userLoggedIn': userLoggedIn,
     }
     return render(request, 'turf_booking/listings.html', context)
 
@@ -145,6 +155,7 @@ def new_slot(request, upk, tpk):
                     'user_id': upk,
                     'form': form,
                     'check': check,
+                    'userLoggedIn': userLoggedIn,
                 }
                 print('Slot Booked')
                 return render(request, 'turf_booking/slot.html', context)
@@ -159,6 +170,7 @@ def new_slot(request, upk, tpk):
         'user_id': upk,
         'form': form,
         'check': check,
+        'userLoggedIn': userLoggedIn,
     }
     return render(request, 'turf_booking/slot.html', context)
 
@@ -170,6 +182,7 @@ def turf_detail(request, pk):
         context = {
             'slot_list': slot_list,
             'turf': turf,
+            'turfLoggedIn': turfLoggedIn,
         }
         return render(request, 'turf_booking/turf_detail.html', context)
     except Exception:
@@ -181,4 +194,8 @@ def turf_detail(request, pk):
 
 
 def home(request):
+    global userLoggedIn
+    userLoggedIn = False
+    global turfLoggedIn
+    turfLoggedIn = False
     return render(request, 'turf_booking/home.html')

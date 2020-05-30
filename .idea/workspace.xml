@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="70f305c4-3a44-4513-977c-5d8d68807a5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/listings.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/listings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/login_turf.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/login_turf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/slot.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/slot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/turf_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/templates/turf_booking/turf_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/turf_booking/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/turf_booking/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,10 +69,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584461564858" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590647490976">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1590796220114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590647490976" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590796220114" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584956393106">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

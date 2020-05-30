@@ -7,6 +7,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
+{% if userLoggedIn %}
     <div class = "container">
         <div id = "heading">
             <h1 style = "text-align:center; font-family: 'Andale Mono', monospace;"> {{ user.name }}</h1>
@@ -30,5 +31,9 @@
 
         </div>
     </div>
+{% endif %}
+{% if userLoggedIn == False %}
+<h2>You aren't Authorized to view this page.</h2>
+{% endif %}
 </body>
 </html>

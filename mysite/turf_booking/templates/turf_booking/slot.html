@@ -5,20 +5,25 @@
 
 <body>
 <div class = "container">
-<h1>Slot Form</h1>
-{% for slot in slot_list %}
-    <p>{{ slot.date}}, {{ slot.timing }}: {{ slot.user }}</p>
-{% endfor %}
-<form method = "POST" class = "form-control">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type = "submit">
-    {% if check %}
-    <p>
-        Slot Already Booked. Choose Another Slot.
-    </p>
-    {% endif %}
-</form>
-<a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
+    {% if userLoggedIn %}
+    <h1>Slot Form</h1>
+    {% for slot in slot_list %}
+        <p>{{ slot.date}}, {{ slot.timing }}: {{ slot.user }}</p>
+    {% endfor %}
+    <form method = "POST" class = "form-control">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type = "submit">
+        {% if check %}
+        <p>
+            Slot Already Booked. Choose Another Slot.
+        </p>
+        {% endif %}
+    </form>
+    <a class="btn btn-primary" href="{% url 'home' %}" role="button">Home</a>
     </div>
+    {% endif %}
+    {% if userLoggedIn == False %}
+        <h2>You aren't Authorized to view this page</h2>
+    {% endif %}
 </body>
