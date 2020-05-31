@@ -9,12 +9,22 @@ turfLoggedIn = True
 
 
 def create_turf(request):
-    form = NewTurf(request.POST, request.FILES)
+    form = NewTurf()
 
     if request.method == "POST":
         form = NewTurf(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            name = form.cleaned_data.get('name')
+            location = form.cleaned_data.get('location')
+            password = form.cleaned_data.get('password')
+            image = form.cleaned_data.get('image')
+            obj = Turf.objects.create(
+                name=name,
+                password=password,
+                location=location,
+                image=image
+            )
+            obj.save()
             return redirect(login_turf)
     context = {
         'form': form,

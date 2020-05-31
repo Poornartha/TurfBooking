@@ -3,10 +3,12 @@ from .models import Turf, Slot, Bookie
 from django.contrib.admin.widgets import AdminDateWidget
 
 # Form for creation of new Turf:
+
+
 class NewTurf(forms.ModelForm):
     class Meta:
         model = Turf
-        fields = "__all__"
+        fields = ['name', 'location', 'password', 'image']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control col-lg-12'}),
             'location': forms.Textarea(attrs={'class': 'form-control col-lg-12'}),
