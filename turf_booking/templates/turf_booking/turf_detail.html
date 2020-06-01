@@ -24,6 +24,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Time</th>
+                    <th scope="col">Date</th>
                     <th scope="col">User</th>
                     <th scope="col">Phone Number</th>
                 </tr>
@@ -32,6 +33,7 @@
         {% for slot in slot_list %}
             <tbody>
                      <td>{{ slot.timing }}</td>
+                     <td>{{ slot.date }}</td>
                         <td>{{ slot.user }}</td>
                      <td>{{ slot.user.phone_number }}</td>
                  </tr>

@@ -97,7 +97,7 @@ def create_user(request):
             pk = Bookie.objects.get(name=name).pk
             global userLoggedIn
             userLoggedIn = True
-        return redirect('listings', pk)
+            return redirect('listings', pk)
     context = {
         'form': form,
     }
@@ -118,7 +118,7 @@ def user_login(request):
                     pk = user.pk
                     global userLoggedIn
                     userLoggedIn = True
-                return redirect('listings', pk)
+                    return redirect('listings', pk)
             except Exception:
                 check = True
                 print("User absent")

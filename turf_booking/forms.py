@@ -1,10 +1,7 @@
 from django import forms
 from .models import Turf, Slot, Bookie
-from django.contrib.admin.widgets import AdminDateWidget
 
 # Form for creation of new Turf:
-
-
 class NewTurf(forms.ModelForm):
     class Meta:
         model = Turf

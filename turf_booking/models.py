@@ -1,16 +1,12 @@
 from django.db import models
-import datetime
 from django.utils import timezone
-
-
-# Create your models here.
 
 
 class Turf(models.Model):
     name = models.CharField(max_length=200)
     location = models.TextField()
     password = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/', blank=True)
+    image = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return self.name
